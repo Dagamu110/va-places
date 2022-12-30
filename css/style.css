@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: system-ui;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: #FAF7F0;
+}
+
+nav > div{
+
+	height: 60px;	
+	display: flex;
+	align-items: center;
+	margin: 0 30px;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+.Pages a {
+	margin: 0 0;  
+	padding: 0 25px;
+	color: black;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.Pages a:hover {
+	background-color: #CDFCF6;
+}
+
+.Pages ul {
+	display: flex;
+    	flex-direction: row;
+        flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+}
+
+.Pages ul li {
+	list-style: none;
+	height: 100%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.placeCard {
+	width: 40%;
+	margin: 30px 0;
+	height: 400px;	
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	display: flex;
+    }
+ 
+.placeCard img {
+	width: 40%;
+	object-fit: cover;
+	height: 100%;
+}
+
+.infoCard {
+	padding: 30px;
+}
+
+.infoCard > div {
+	margin: 20px 0;
+}
+
+.infoCard i {
+	margin: 0 5px;
+}
+
+.linksCard {
+	display: flex;
+	flex-direction: column
+}
+
+.infoCard span {
+	margin: 5px 0;
+}
+
+.infoCard > p {
+	margin: 20px 0;
+}
+
+.modal {
+	background-color: rgba(0,0,0,.3);
+	position: fixed;
+	opacity:0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.3s ease-in-out;
+	
+	z-index: -1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal.open{
+	opacity: 1;
+	z-index: 3;
+}
+
+.modal-inner {
+	background-color: #fff;
+	border-radius: 5px;
+	height: 150px;
+	padding: 20px 40px;
+	text-align: center;
+	width: 50%
+}
+
+.modal-inner * {
+	margin-bottom: 20px;
+}
+
+.modal-inner button {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+}
+
+@media (max-width: 900px) {
+  .placeCard {
+	width: 90%;	    
+  }
+	}
+
+@media (max-width: 700px) {
+	nav {
+		flex-direction: column
+	}
+}
+
+@media(max-width: 450px) {
+	body {
+		font-size: 80%;
+	}
+}
